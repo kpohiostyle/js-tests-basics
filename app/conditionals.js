@@ -1,7 +1,7 @@
 //1. Given two numbers, write a function that will return  the larger number
 
 function largerNum(num1, num2) {
-    // you code here
+    return Math.max([num1], [num2])
 
 }
 
@@ -14,6 +14,7 @@ function largerNum(num1, num2) {
 // output: "F"
 
 function testGrader(score, possible) {
+
 
 }
 
@@ -29,14 +30,30 @@ function testGrader(score, possible) {
 //Make sure your ranges are inclusive
 
 function timeOfDayGreeting(hour) {
-    // you code below
-
+    if (hour >= 5 && hour <= 11) {
+        return "good morning"
+    } else if (hour >= 12 && hour <= 17) {
+        return "good afternoon"
+    } else if (hour >= 18 && hour <= 21) {
+        return "good evening"
+    } else {
+        return "good night"
+    }
 }
+
 
 //4. Write a function that will take in a number and return 'fever' if it indicates a fever (over 98.6) and additionally if the person should go to the hospital (at or above 103) 'fever go to hospital' (hint: try this with string concatenation), if it is under return 'no fever'
 function isFever(temp) {
-
+    if (temp > 98.6) {
+        let fever = "fever"
+        return fever
+        if (temp > 103) {
+            return fever + " " + 'go to hospital'
+        }
+    } else
+        return "no fever"
 }
+
 
 //5. Write a function that takes in a car object, if it is not moving then return true
 let myCar = {
