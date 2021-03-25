@@ -14,7 +14,19 @@ function largerNum(num1, num2) {
 // output: "F"
 
 function testGrader(score, possible) {
-
+    let output
+    let testScore = score / possible
+    console.log(testScore)
+    if (testScore >= .90) {
+        output = "A"
+    } else if (testScore >= .80 && testScore <= .89) {
+        output = "B"
+    } else if (testScore >= .70 && testScore <= .79) {
+        output = "C"
+    } else if (testScore >= .60 && testScore <= .69) {
+        output = "D"
+    }
+    return output
 
 }
 
@@ -30,28 +42,32 @@ function testGrader(score, possible) {
 //Make sure your ranges are inclusive
 
 function timeOfDayGreeting(hour) {
+    let greeting
     if (hour >= 5 && hour <= 11) {
-        return "good morning"
+        greeting = "good morning"
     } else if (hour >= 12 && hour <= 17) {
-        return "good afternoon"
+        greeting = "good afternoon"
     } else if (hour >= 18 && hour <= 21) {
-        return "good evening"
+        greeting = "good evening"
     } else {
-        return "good night"
+        greeting = "good night"
     }
+    return greeting
 }
 
 
 //4. Write a function that will take in a number and return 'fever' if it indicates a fever (over 98.6) and additionally if the person should go to the hospital (at or above 103) 'fever go to hospital' (hint: try this with string concatenation), if it is under return 'no fever'
 function isFever(temp) {
+    let fever
     if (temp > 98.6) {
-        let fever = "fever"
-        return fever
+        fever = "fever"
+
         if (temp > 103) {
-            return fever + " " + 'go to hospital'
+            fever = fever + " " + 'go to hospital'
         }
     } else
         return "no fever"
+    return fever
 }
 
 
@@ -75,5 +91,9 @@ let dish = {
 }
 
 function washDish(dish) {
+    if (dish.yourDish == true && dish.yourDish == true) {
+        return true
+    } else
+        return false
 
 }

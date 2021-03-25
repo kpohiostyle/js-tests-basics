@@ -53,6 +53,6 @@ function colorTheCat() {
 // Example: objectName.property[indexNumber]
 
 function returnIndex(cat) {
-  delete cat.whiskers
+  delete (cat.whiskers)
   return cat.likes[3]
 }

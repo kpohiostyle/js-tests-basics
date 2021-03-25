@@ -34,7 +34,5 @@ function isEven(num) {
 // Make it inclusive so that the starting and ending numbers are part 
 // of the range.HINT ** Utilize Javascript's Math Class (To the Google!)
 function numberGenerator(num1, num2) {
-    min = Math.ceil(num1);
-    max = Math.floor(num2);
-    return Math.floor(Math.random() * (num1 - num2 + 1) + num1); //The maximum is inclusive and the minimum is inclusive
+    return Math.floor(Math.random() * (num2 - num1 + 1) + num1);
 }
